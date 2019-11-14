@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  padding: 10px;
+}
+
+.row{
+  margin-bottom:5px;
+}
+
+.box {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.box .sconto {
+  position: absolute;
+  top:0;
+  right:0;
+  z-index: 1;
+  background-color: green;
+}
+
+.box:nth-child(even) .sconto {
+  background: red;
+}
+
+.box .heart {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  widht: 100%;
+  padding: 5px;
+  text-align: center;
+  display: none;
+}
+.box:hover .heart {
+  display: block;
+  color: red;
+}
